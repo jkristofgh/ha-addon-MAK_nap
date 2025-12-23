@@ -17,7 +17,7 @@ map:
 environment:
   HOST: 0.0.0.0
   PORT: "8000"
-image: ghcr.io/jkristofgh/nap-ha:latest
+image: ghcr.io/jkristofgh/nap-ha
 options:
   slack_alerts_enabled: false
   slack_token: ""
