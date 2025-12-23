@@ -1,0 +1,29 @@
+name: Nap Simulation
+slug: nap_sim
+description: Nap currency arbitrage simulator served over HTTP
+version: "1.0.0"
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: services
+boot: auto
+init: false
+host_network: false
+ports:
+  8000/tcp: 8000
+map:
+  - share:rw
+environment:
+  HOST: 0.0.0.0
+  PORT: "8000"
+image: ghcr.io/REPLACE_WITH_GITHUB_USERNAME/nap-ha-{arch}
+options:
+  slack_alerts_enabled: false
+  slack_token: ""
+  slack_channel_id: ""
+schema:
+  slack_alerts_enabled: bool
+  slack_token: str?
+  slack_channel_id: str?
+watchdog: http://[HOST]:[PORT:8000]/
