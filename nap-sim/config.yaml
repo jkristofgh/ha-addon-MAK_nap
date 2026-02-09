@@ -1,7 +1,7 @@
 name: Nap Simulation
 slug: nap_sim
 description: Nap currency arbitrage simulator served over HTTP
-version: "1.0.0"
+version: "1.0.1"
 arch:
   - amd64
   - armv7
